@@ -2,7 +2,7 @@
 *.class
 
 # Ignore the application.properties file
-application.properties
+src/main/resources/application.properties
 
 # Log file
 *.log
@@ -61,3 +61,4 @@ build/
 
 ### VS Code ###
 .vscode/
+
