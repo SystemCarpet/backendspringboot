@@ -1,6 +1,9 @@
 # Compiled class file
 *.class
 
+# Ignore the application.properties file
+application.properties
+
 # Log file
 *.log
 
@@ -28,7 +31,7 @@ target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
-application.properties
+
 
 
 ### STS ###
