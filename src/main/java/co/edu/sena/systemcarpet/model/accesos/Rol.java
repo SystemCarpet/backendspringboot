@@ -1,4 +1,4 @@
-package co.edu.sena.SystemCarpet.model.accesos;
+package co.edu.sena.systemcarpet.model.accesos;
 
 
 import jakarta.persistence.*;
@@ -6,7 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.LinkedList;
+
+import java.util.List;
 
 
 @Setter
@@ -28,7 +29,7 @@ public class Rol {
             joinColumns = @JoinColumn(name="rol_id",referencedColumnName = "id_rol"),
             inverseJoinColumns = @JoinColumn(name="permiso_id",referencedColumnName = "id_permiso")
     )
-    private LinkedList<Permiso> permisos;
+    private List<Permiso> permisos;
 
     public Rol(String nombreRol) {
         this.nombreRol = nombreRol;

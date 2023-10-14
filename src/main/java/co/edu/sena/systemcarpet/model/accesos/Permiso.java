@@ -1,11 +1,12 @@
-package co.edu.sena.SystemCarpet.model.accesos;
+package co.edu.sena.systemcarpet.model.accesos;
 
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.LinkedList;
+
+import java.util.List;
 
 @Setter
 @Getter
@@ -23,7 +24,7 @@ public class Permiso {
 
     @ManyToMany(mappedBy = "permisos")
 
-    private LinkedList<Rol> roles;
+    private List<Rol> roles;
 
     public Permiso(String nombrePermiso) {
         this.nombrePermiso = nombrePermiso;
