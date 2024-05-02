@@ -1,10 +1,12 @@
 package co.edu.sena.systemcarpet.model.actor.access;
 
+import co.edu.sena.systemcarpet.model.actor.User;
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.io.Serializable;
 import java.sql.Timestamp;
+import java.util.List;
 
 @Entity
 @Table(name = "roles")
@@ -27,4 +29,7 @@ public class Role implements Serializable {
     private Timestamp createdAt;
     @Column(name = "update_at", length = 30, nullable = false)
     private Timestamp updateAt;
+
+    @ManyToMany(mappedBy = "roleList")
+    private List<User> userList;
 }

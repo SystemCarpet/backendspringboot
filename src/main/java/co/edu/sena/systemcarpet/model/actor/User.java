@@ -7,6 +7,7 @@ import lombok.*;
 
 import java.io.Serializable;
 import java.sql.Timestamp;
+import java.util.List;
 
 @Entity
 @Table(name = "users")
@@ -44,9 +45,13 @@ public class User implements Serializable {
     //@Column(name = "remember_token")
     //private String rememberToken;
 
-    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    @JoinColumn(name = "rol_id")
-    private Role role;
+    @ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
+    @JoinTable(
+            name = "users_roles",
+            joinColumns = @JoinColumn(name= "user_id",referencedColumnName = "id",nullable = false),
+            inverseJoinColumns = @JoinColumn(name= "role_id",referencedColumnName = "id",nullable = false)
+    )
+    private List<Role> roleList;
 
 
 }
