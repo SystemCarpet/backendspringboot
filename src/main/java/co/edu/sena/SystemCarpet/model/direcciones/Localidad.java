@@ -1,4 +1,4 @@
-﻿package co.edu.sena.SystemCarpet.model.direcciones;
+package co.edu.sena.SystemCarpet.model.direcciones;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

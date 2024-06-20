@@ -1,4 +1,4 @@
-﻿package co.edu.sena.SystemCarpet.model.proveedores;
+package co.edu.sena.SystemCarpet.model.proveedores;
 
 import co.edu.sena.SystemCarpet.model.direcciones.Direccion;
 import jakarta.persistence.*;

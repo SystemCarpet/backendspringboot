@@ -1,4 +1,4 @@
-﻿package co.edu.sena.SystemCarpet.model.inventario.materiasprimas;
+package co.edu.sena.SystemCarpet.model.inventario.materiasprimas;
 
 import co.edu.sena.SystemCarpet.model.inventario.articulos.Articulo;
 import jakarta.persistence.*;

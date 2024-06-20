@@ -1,4 +1,4 @@
-﻿package co.edu.sena.SystemCarpet.model.direcciones;
+package co.edu.sena.SystemCarpet.model.direcciones;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -16,10 +16,10 @@ public class Barrio {
     @Column(name = "id_barrio", nullable = false)
     private Integer idBarrio;
 
-    @Column(name = "nombre_barrio", length = 30, nullable = false,unique = true)
+    @Column(name = "nombre_barrio", length = 30, nullable = false, unique = true)
     private String nombreBarrio;
 
     @ManyToOne
-    @JoinColumn(name = "localidad_id")
+    @JoinColumn(name = "localidad_id", nullable = false)
     private Localidad localidad;
 }

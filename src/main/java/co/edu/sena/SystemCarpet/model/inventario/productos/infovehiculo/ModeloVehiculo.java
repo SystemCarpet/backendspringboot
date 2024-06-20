@@ -1,4 +1,4 @@
-﻿package co.edu.sena.SystemCarpet.model.inventario.productos.infovehiculo;
+package co.edu.sena.SystemCarpet.model.inventario.productos.infovehiculo;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

@@ -1,4 +1,4 @@
-﻿package co.edu.sena.SystemCarpet.model.proveedores.entregas;
+package co.edu.sena.SystemCarpet.model.proveedores.entregas;
 
 import co.edu.sena.SystemCarpet.model.proveedores.Proveedor;
 import jakarta.persistence.*;

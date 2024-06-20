@@ -1,4 +1,4 @@
-﻿package co.edu.sena.SystemCarpet.model.inventario.productos;
+package co.edu.sena.SystemCarpet.model.inventario.productos;
 
 import co.edu.sena.SystemCarpet.model.inventario.articulos.Articulo;
 import co.edu.sena.SystemCarpet.model.inventario.productos.Categoria;
