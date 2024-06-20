@@ -18,8 +18,4 @@ public class Localidad {
 
     @Column(name = "nombre_localidad", length = 30, nullable = false,unique = true)
     private String nombreLocalidad;
-
-    public Localidad(String nombreLocalidad) {
-        this.nombreLocalidad = nombreLocalidad;
-    }
 }

@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 public class Articulo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_articulo", nullable = false)
+    @Column(name = "id_articulo")
     private Integer idArticulo;
 
     @Column(name = "nombre_articulo", length = 30, nullable = false,unique = true)
@@ -29,11 +29,4 @@ public class Articulo {
     @ManyToOne
     @JoinColumn(name = "tipo_articulo_id")
     private TiposArticulo tipoArticulo;
-
-    public Articulo(String nombreArticulo, String descripcion, EstadosArticulo estadoArticulo, TiposArticulo tipoArticulo) {
-        this.nombreArticulo = nombreArticulo;
-        this.descripcion = descripcion;
-        this.estadoArticulo = estadoArticulo;
-        this.tipoArticulo = tipoArticulo;
-    }
 }

@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 public class ModeloVehiculo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_modelo_vehiculo", nullable = false)
+    @Column(name = "id_modelo_vehiculo")
     private Integer idModeloVehiculo;
 
     @Column(name = "nombre_modelo_vehiculo", length = 30, nullable = false,unique = true)
@@ -27,11 +27,4 @@ public class ModeloVehiculo {
     @ManyToOne
     @JoinColumn(name = "tipo_vehiculo_id")
     private TipoVehiculo tipoVehiculo;
-
-    public ModeloVehiculo(String nombreModeloVehiculo, Integer numeroModeloVehiculo, MarcaVehiculo marcaVehiculo, TipoVehiculo tipoVehiculo) {
-        this.nombreModeloVehiculo = nombreModeloVehiculo;
-        this.numeroModeloVehiculo = numeroModeloVehiculo;
-        this.marcaVehiculo = marcaVehiculo;
-        this.tipoVehiculo = tipoVehiculo;
-    }
 }

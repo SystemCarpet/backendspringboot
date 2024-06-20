@@ -22,9 +22,4 @@ public class Direccion {
     @ManyToOne
     @JoinColumn(name = "barrio_id")
     private Barrio barrio;
-
-    public Direccion(String detalles, Barrio barrio) {
-        this.detalles = detalles;
-        this.barrio = barrio;
-    }
 }

@@ -13,13 +13,9 @@ import lombok.NoArgsConstructor;
 public class EstadosArticulo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_estado_articulo", nullable = false)
+    @Column(name = "id_estado_articulo")
     private Integer idEstadoArticulo;
 
     @Column(name = "nombre_estado_articulo", length = 30, nullable = false,unique = true)
     private String nombreEstadoArticulo;
-
-    public EstadosArticulo(String nombreEstadoArticulo) {
-        this.nombreEstadoArticulo = nombreEstadoArticulo;
-    }
 }

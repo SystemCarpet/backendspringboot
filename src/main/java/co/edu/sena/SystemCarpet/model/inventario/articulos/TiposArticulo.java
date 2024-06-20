@@ -13,13 +13,9 @@ import lombok.NoArgsConstructor;
 public class TiposArticulo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_tipo_articulo", nullable = false)
+    @Column(name = "id_tipo_articulo")
     private Integer idTipoArticulo;
 
     @Column(name = "nombre_tipo_articulo", length = 30, nullable = false,unique = true)
     private String nombreTipoArticulo;
-
-    public TiposArticulo(String nombreTipoArticulo) {
-        this.nombreTipoArticulo = nombreTipoArticulo;
-    }
 }

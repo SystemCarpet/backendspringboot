@@ -1,22 +1,25 @@
 ﻿package co.edu.sena.SystemCarpet.model.inventario.productos;
 
-import co.edu.sena.SystemCarpet.model.inventario.productos.infovehiculo.ModeloVehiculo;
 import co.edu.sena.SystemCarpet.model.inventario.articulos.Articulo;
+import co.edu.sena.SystemCarpet.model.inventario.productos.Categoria;
+import co.edu.sena.SystemCarpet.model.inventario.productos.infovehiculo.ModeloVehiculo;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+@AllArgsConstructor
 @Data
 @NoArgsConstructor
 @Entity
-@Table(name = "producto")
+@Table(name = "productos")
 public class Producto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_producto", nullable = false)
+    @Column(name = "id_producto")
     private Integer idProducto;
 
-    @Column(name = "nombre_producto", length = 30, nullable = false,unique = true)
+    @Column(name = "nombre_producto", length = 30, nullable = false, unique = true)
     private String nombreProducto;
 
     @Column(name = "precio", nullable = false)
@@ -33,12 +36,4 @@ public class Producto {
     @ManyToOne
     @JoinColumn(name = "articulo_id")
     private Articulo articulo;
-
-    public Producto(String nombreProducto, Double precio, ModeloVehiculo modeloVehiculo, Categoria categoria, Articulo articulo) {
-        this.nombreProducto = nombreProducto;
-        this.precio = precio;
-        this.modeloVehiculo = modeloVehiculo;
-        this.categoria = categoria;
-        this.articulo = articulo;
-    }
 }

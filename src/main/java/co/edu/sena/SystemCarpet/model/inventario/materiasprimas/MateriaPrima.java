@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 public class MateriaPrima {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_materia_prima", nullable = false)
+    @Column(name = "id_materia_prima")
     private Integer idMateriaPrima;
 
     @Column(name = "nombre_materia_prima", length = 30, nullable = false,unique = true)

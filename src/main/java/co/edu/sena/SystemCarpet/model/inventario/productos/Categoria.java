@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 public class Categoria {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_categoria", nullable = false)
+    @Column(name = "id_categoria")
     private Integer idCategoria;
 
     @Column(name = "nombre_categoria", length = 30, nullable = false,unique = true)
@@ -21,9 +21,4 @@ public class Categoria {
 
     @Column(name = "descuento_categoria", nullable = false)
     private Double descuentoCategoria;
-
-    public Categoria(String nombreCategoria, Double descuentoCategoria) {
-        this.nombreCategoria = nombreCategoria;
-        this.descuentoCategoria = descuentoCategoria;
-    }
 }

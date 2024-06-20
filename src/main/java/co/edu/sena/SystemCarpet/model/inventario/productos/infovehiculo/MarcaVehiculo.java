@@ -13,16 +13,10 @@ import lombok.NoArgsConstructor;
 public class MarcaVehiculo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_marca_vehiculo", nullable = false)
+    @Column(name = "id_marca_vehiculo")
     private Integer idMarcaVehiculo;
 
     @Column(name = "nombre_marca_vehiculo", length = 30, nullable = false,unique = true)
     private String nombreMarcaVehiculo;
 
-    public MarcaVehiculo(String nombreMarcaVehiculo) {
-        this.nombreMarcaVehiculo = nombreMarcaVehiculo;
-    }
-
-    public static class Categoria {
-    }
 }
