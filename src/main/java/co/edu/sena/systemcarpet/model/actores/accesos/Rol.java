@@ -18,9 +18,9 @@ public class Rol {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_rol", nullable = false)
+    @Column(name = "id_rol")
     private Integer idRol;
-    @Column(name = "nombre_rol", length = 30, nullable = false,unique = true)
+    @Column(name = "nombre_rol", length = 30,unique = true,nullable = false)
     private String nombreRol;
 
     @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.MERGE)
