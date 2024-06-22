@@ -22,6 +22,9 @@ public class Articulo {
     @Column(name = "descripcion", length = 200, nullable = false)
     private String descripcion;
 
+    @Column(name = "cantidad", nullable = false)
+    private Integer cantidad;
+
     @ManyToOne
     @JoinColumn(name = "estado_articulo_id")
     private EstadosArticulo estadoArticulo;

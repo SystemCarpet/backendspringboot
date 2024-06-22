@@ -18,11 +18,11 @@ public class Producto {
     @Column(name = "id_producto")
     private Integer idProducto;
 
-    @Column(name = "nombre_producto", length = 30, nullable = false, unique = true)
-    private String nombreProducto;
-
-    @Column(name = "precio", nullable = false)
+    @Column(name = "precio_producto")
     private Double precio;
+
+    @Column(name = "imagen_producto")
+    private String imagenProducto;
 
     @ManyToOne
     @JoinColumn(name = "modelo_vehiculo_id")
