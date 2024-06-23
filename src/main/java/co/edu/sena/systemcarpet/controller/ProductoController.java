@@ -32,10 +32,11 @@ public class ProductoController {
     }
 
     @PatchMapping("/{id}/update")
-    public Optional<Producto> updateProducto(@RequestBody Producto producto, @PathVariable Integer id) {
-        if (productoService.existsById(id)) {
+    public Optional<Producto> updateProducto(@RequestBody Producto producto) {
+
+        if (productoService.existsById(producto.getIdProducto())) {
             productoService.updateProducto(producto);
-            return productoService.getProductoById(id);
+            return productoService.getProductoById(producto.getIdProducto());
         } else {
             return Optional.empty();
         }
